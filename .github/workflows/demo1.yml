@@ -6,6 +6,11 @@ on:
   push:
     branches:
       - master
+     #- 'dev-*' E.g. dev/new-abcd-olof * stands for single /
+     #- 'feat/**' E.g. feat/new-open/read/feel ** stands for more than one //
+    #branches-ignore:
+    paths-ignore:
+      - '.github/workflows/*'
 jobs:
   deploy:
     runs-on: ubuntu-latest
